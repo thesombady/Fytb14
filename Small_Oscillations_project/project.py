@@ -30,8 +30,16 @@ K2 = k*Matrix([[5/4, -1, -1/4, q, 0, -q],
 
 #print((K-w**2*M_m).eigenvals())
 #print(K2.shape)
-#print((K2-w**2*M_m).eigenvects())
-print((K2-w**2*M_m).det())
+eigenvectors = (K2-w**2*M_m).eigenvects()
+#print((K2-w**2*M_m).det())
+for i in range(len(eigenvectors)):
+    try:
+        print(f"Eigenvalue:",eigenvectors[i][0])
+        a = K2*Matrix([eigenvectors[i][2]])
+        print(f"Compuation:", a)
+        print(f"Actual eigenvector:",eigenvectors[i][2])
+    except Exception as e:
+        print(e)
 """
 vectors = (K2-w**2*M_m).eigenvects()
 #print(vectors[1][2])
