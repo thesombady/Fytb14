@@ -7,10 +7,12 @@ m1 = Symbol('m1', postive = True)
 m2 = Symbol('m2', postive = True)
 m3 = Symbol('m3', postive = True)
 m = Symbol('m', postive = True)
+import SacraMathEngine as s
 
 M=Matrix([[m1,0,0,0,0,0],[0,m2,0,0,0,0], [0,0,m3,0,0,0],[0,0,0,m1,0,0],[0,0,0,0,m2,0],[0,0,0,0,0,m3]])
 k = Symbol('k')
 w = Symbol('w')
+
 M_m = Matrix([[m,0,0,0,0,0],[0,m,0,0,0,0], [0,0,m,0,0,0],[0,0,0,m,0,0],[0,0,0,0,m,0],[0,0,0,0,0,m]])
 
 q = np.sqrt(3)/4
